@@ -18,7 +18,6 @@
   }
 
   interface Options extends RequestInit {
-
     prefix?: string;
 
     query?: Query;
@@ -33,9 +32,7 @@
   }
 
   declare namespace FetchIo {
-
     class Request {
-
       constructor(method: TMethod, url: TUrl, options: Options)
 
       /**

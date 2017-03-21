@@ -26,7 +26,6 @@ class NumCoercible {
 }
 
 class MixedObject {
-
     num: number;
     str: string;
     numeric: NumCoercible;
@@ -339,8 +338,8 @@ crossed = d3Array.cross<string, number>(['x', 'y'], [1, 2]);
 
 let strArray: string[] = d3Array.cross<number, number, string>([2, 3], [5, 6], (a, b) => (a + b) + 'px');
 strArray = d3Array.cross([2, 3], [5, 6], (a, b) => {
-    let aa: number = a;
-    let bb: number = b;
+    const aa: number = a;
+    const bb: number = b;
     return (aa + bb) + 'px';
 });
 
@@ -353,8 +352,8 @@ pairs = d3Array.pairs(mergedArray);
 
 numbersArray = d3Array.pairs<MixedObject, number>(mergedArray, (a, b) => b.num - a.num);
 numbersArray = d3Array.pairs(mergedArray, (a, b) => {
-    let aa: MixedObject = a;
-    let bb: MixedObject = b;
+    const aa: MixedObject = a;
+    const bb: MixedObject = b;
     return bb.num - aa.num;
 });
 

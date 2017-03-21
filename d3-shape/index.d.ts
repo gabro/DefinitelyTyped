@@ -1285,7 +1285,6 @@ export function area<Datum>(): Area<Datum>;
  * The generic refers to the data type of an element in the input array passed into the area generator.
  */
 export interface RadialArea<Datum> {
-
     /**
      * Generates a radial area for the given array of data.
      *
@@ -1990,7 +1989,6 @@ export interface Symbol<This, Datum> {
      * @param context null, to remove rendering context.
      */
     context(context: null): this;
-
 }
 
 /**
@@ -2221,7 +2219,6 @@ export interface Stack<This, Datum, Key> {
      *               The offset function is then responsible for updating the lower and upper values in the series array to layout the stack.
      */
     offset(offset: (series: Series<Datum, Key>, order: number[]) => void): this;
-
 }
 
 /**

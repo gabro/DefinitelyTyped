@@ -33,7 +33,6 @@ function sample1() {
 }
 
 function sample2() {
-
   var dot: fabric.Circle, i: number,
     t1: number, t2: number,
     startTimer = () => {
@@ -66,7 +65,6 @@ function sample2() {
   }
   results1.innerHTML = 'Regular rendering of 100 elements in ' + stopTimer() + 'ms';
 
-
   //
   // Rendering canvas #2
   //
@@ -88,7 +86,6 @@ function sample2() {
 }
 
 function sample3() {
-
   var $: (id: string) => HTMLElement = (id: string) => document.getElementById(id);
 
   function applyFilter(index: number, filter: any) {
@@ -211,7 +208,6 @@ function sample3() {
 }
 
 function sample4() {
-
   var canvas = new fabric.Canvas('c');
   var $: (id: string) => HTMLElement = id => document.getElementById(id);
 
@@ -250,7 +246,6 @@ function sample4() {
   };
 
   function updateControls() {
-
     scaleControl.value = rect.getScaleX().toString();
     angleControl.value = rect.getAngle().toString();
     leftControl.value = rect.getLeft().toString();
@@ -262,7 +257,6 @@ function sample4() {
     'object:resizing': updateControls
   });
 }
-
 
 declare module "fabric" {
   export interface CircleWithLineInfos extends Circle {
@@ -352,9 +346,7 @@ function sample6() {
           dist = Math.round(Math.sqrt(Math.pow(distX, 2) + Math.pow(distY, 2)));
         obj.setOpacity(1 / (dist / 20));
       });
-
     });
-
   });
 }
 
@@ -377,7 +369,6 @@ function sample7() {
     });
   }, 1000);
 
-
   var animate = (function animate() {
     canvas.forEachObject(obj => {
       var img = <fabric.ImageWithInfo> obj;
@@ -397,7 +388,6 @@ function sample7() {
 }
 
 function sample8() {
-
   function pad(str: string, length: number): string {
     while (str.length < length) {
       str = '0' + str;
@@ -454,7 +444,6 @@ function sample8() {
       angle = fabric.util.getRandomInt(-20, 40),
       width = fabric.util.getRandomInt(30, 50),
       opacity = ((min: number, max: number) => Math.random() * (max - min) + min)(0.5, 1);
-
 
     switch (className) {
       case 'rect':
@@ -557,7 +546,6 @@ function sample8() {
       eval(code); // tslint:disable-line:no-eval
     }
   };
-
 
   document.getElementById('rasterize').onclick = () => {
     if (!fabric.Canvas.supports('toDataURL')) {
@@ -794,7 +782,6 @@ function sample8() {
   canvas.freeDrawingColor = drawingColorEl.value;
   canvas.freeDrawingLineWidth = parseInt(drawingLineWidthEl.value, 10) || 1;
 
-
   var text = 'Lorem ipsum dolor sit amet,\nconsectetur adipisicing elit,\nsed do eiusmod tempor incididunt\nut labore et dolore magna aliqua.\n' +
     'Ut enim ad minim veniam,\nquis nostrud exercitation ullamco\nlaboris nisi ut aliquip ex ea commodo consequat.';
 
@@ -812,7 +799,6 @@ function sample8() {
     canvas.add(textSample);
     updateComplexity();
   };
-
 
   document.onkeydown = e => {
     var obj = canvas.getActiveObject() || canvas.getActiveGroup();

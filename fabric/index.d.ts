@@ -1289,7 +1289,6 @@ export class StaticCanvas {
 	 */
 	fxStraightenObject(object: Object): StaticCanvas
 
-
 	static EMPTY_JSON: string;
 	/**
 	 * Provides a way to check support of some of the canvas methods
@@ -2997,8 +2996,8 @@ interface IRectOptions extends IObjectOptions {
 	 * Vertical border radius
 	 */
 	ry?: number;
-
 }
+
 export interface Rect extends IRectOptions {}
 export class Rect extends Object {
 	/**
@@ -3950,8 +3949,8 @@ export class BaseBrush {
 	 * @param {Object|String} [options] Options object or string (e.g. "2px 2px 10px rgba(0,0,0,0.2)")
 	 */
 	setShadow(options: string|any): BaseBrush;
-
 }
+
 export class CircleBrush extends BaseBrush {
 	/**
 	 * Width of a brush
@@ -3969,6 +3968,7 @@ export class CircleBrush extends BaseBrush {
 	 */
 	addPoint(pointer: any): Point
 }
+
 export class SprayBrush extends BaseBrush {
 	/**
 	 * Width of a brush
@@ -4147,7 +4147,6 @@ interface IUtilArc {
 	 * @param {Number} y3
 	 */
 	getBoundsOfCurve(x0: number, y0: number, x1: number, y1: number, x2: number, y2: number, x3: number, y3: number): Point[];
-
 }
 
 interface IUtilDomEvent {
@@ -4298,7 +4297,6 @@ interface IUtilClass {
 	 *                  (be careful modifying objects defined here as this would affect all instances)
 	 */
 	createClass(properties?: any): void;
-
 }
 
 interface IUtilObject {

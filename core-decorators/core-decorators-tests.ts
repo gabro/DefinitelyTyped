@@ -1,4 +1,3 @@
-
 //
 // @autobind
 //
@@ -99,11 +98,9 @@ person2.facepalmHarder();
 // @debounce
 //
 
-
 import { debounce } from 'core-decorators';
 
 class Editor {
-
     content = '';
 
     @debounce(500)
@@ -119,7 +116,6 @@ class Editor {
 import { throttle } from 'core-decorators';
 
 class Editor2 {
-
     content = '';
 
     @throttle(500, {leading: false})
@@ -288,17 +284,12 @@ const myConsole = {
 
 class Bird2 {
     @time('sing')
-    sing() {
-    }
+    sing() {}
 
     @time('sing2', myConsole)
-    sing2() {
-
-    }
+    sing2() {}
 }
 
 var bird2 = new Bird2();
 bird2.sing(); // console.time label will be 'sing-0'
 bird2.sing(); // console.time label will be 'sing-1'
-
-

@@ -1,4 +1,3 @@
-
 import Configstore = require('configstore');
 var cs = new Configstore('foo');
 

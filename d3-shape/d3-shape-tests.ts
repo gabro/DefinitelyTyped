@@ -332,7 +332,6 @@ defaultPie = defaultPie.padAngle(0.03);
 pie = pie.padAngle(d => {
     console.log(d.length > 0 ? d[0].val : 'no data'); // data type is Array<PieDatum>
     return 0.03;
-
 });
 accessorPieDatumNumber = pie.padAngle();
 

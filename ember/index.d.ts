@@ -7,7 +7,6 @@
 /// <reference types="handlebars" />
 
 declare namespace EmberStates {
-
     interface Transition {
         targetName: string;
         urlMethod: string;
@@ -151,16 +150,13 @@ declare namespace EmberStates {
          */
         followRedirects(): Ember.RSVP.Promise<any, any>;
     }
-
 }
 
 // Get an alias to the global Array type to use in inner scope below.
 type GlobalArray<T> = T[];
 
 declare namespace EmberTesting {
-
     namespace Test {
-
         class Adapter {
             asyncEnd(): void;
             asyncStart(): void;
@@ -168,9 +164,7 @@ declare namespace EmberTesting {
         }
 
         class QUnitAdapter extends Adapter { }
-
     }
-
 }
 
 interface Function {
@@ -967,17 +961,17 @@ declare namespace Ember {
     **/
     class Descriptor { }
     namespace ENV {
-        export var EXTEND_PROTOTYPES: typeof Ember.EXTEND_PROTOTYPES;
-        export var LOG_BINDINGS: boolean;
-        export var LOG_STACKTRACE_ON_DEPRECATION: boolean;
-        export var LOG_VERSION: boolean;
-        export var MODEL_FACTORY_INJECTIONS: boolean;
-        export var RAISE_ON_DEPRECATION: boolean;
+        var EXTEND_PROTOTYPES: typeof Ember.EXTEND_PROTOTYPES;
+        var LOG_BINDINGS: boolean;
+        var LOG_STACKTRACE_ON_DEPRECATION: boolean;
+        var LOG_VERSION: boolean;
+        var MODEL_FACTORY_INJECTIONS: boolean;
+        var RAISE_ON_DEPRECATION: boolean;
     }
     namespace EXTEND_PROTOTYPES {
-        export var Array: boolean;
-        export var Function: boolean;
-        export var String: boolean;
+        var Array: boolean;
+        var Function: boolean;
+        var String: boolean;
     }
     /**
     This is the object instance returned when you get the @each property on an array. It uses
@@ -1530,7 +1524,6 @@ declare namespace Ember {
         }
 
         class Promise<T, U> implements Thenable<T, U> {
-
             /**
               Promise objects represent the eventual result of an asynchronous operation. The
               primary way of interacting with a promise is through its `then` method, which
@@ -1591,7 +1584,6 @@ declare namespace Ember {
       the [routing guide](http://emberjs.com/guides/routing/) for documentation.
     */
     class Route extends Object implements ActionHandlerMixin, Evented {
-
         static isClass: boolean;
         static isMethod: boolean;
 

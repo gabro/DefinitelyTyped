@@ -85,7 +85,6 @@ var view = $('#calendar').fullCalendar('getView');
 alert("The view's title is " + view.title);
 
 $(document).ready(() => {
-
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
@@ -145,11 +144,9 @@ $(document).ready(() => {
             }
         ]
     });
-
 });
 
 $(document).ready(() => {
-
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
@@ -210,11 +207,9 @@ $(document).ready(() => {
             }
         ]
     });
-
 });
 
 $(document).ready(() => {
-
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
@@ -264,11 +259,9 @@ $(document).ready(() => {
             }
         ]
     });
-
 });
 
 $(document).ready(() => {
-
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
@@ -329,11 +322,9 @@ $(document).ready(() => {
             }
         ]
     });
-
 });
 
 $(document).ready(() => {
-
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
@@ -383,7 +374,6 @@ $(document).ready(() => {
             }
         ]
     });
-
 });
 
 $('#my-prev-button').click(() => {
@@ -426,7 +416,6 @@ $('#calendar').fullCalendar({
 
 $('#calendar').fullCalendar({
     dayClick(date, allDay, jsEvent, view) {
-
         if (allDay) {
             alert('Clicked on the entire day: ' + date);
         } else {
@@ -439,20 +428,17 @@ $('#calendar').fullCalendar({
 
         // change the day's background color just for fun
         $(this).css('background-color', 'red');
-
     }
 });
 
 $('#calendar').fullCalendar({
     eventClick(calEvent, jsEvent, view) {
-
         alert('Event: ' + calEvent.title);
         alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
         alert('View: ' + view.name);
 
         // change the border color just for fun
         $(this).css('border-color', 'red');
-
     }
 });
 
@@ -474,7 +460,6 @@ $('#calendar').fullCalendar({
 });
 
 $('#calendar').fullCalendar({
-
     eventSources: [
 
         // your event source
@@ -495,11 +480,9 @@ $('#calendar').fullCalendar({
         // any other sources...
 
     ]
-
 });
 
 $('#calendar').fullCalendar({
-
     events: {
         url: '/myfeed.php',
         type: 'POST',
@@ -513,22 +496,17 @@ $('#calendar').fullCalendar({
         color: 'yellow',   // a non-ajax option
         textColor: 'black' // a non-ajax option
     }
-
 });
 
 $('#calendar').fullCalendar({
-
     events: {
         url: '/myfeed.php',
         cache: true
     }
-
 });
 
 $('#calendar').fullCalendar({
-
     eventSources: [
-
         // your event source
         {
             url: '/myfeed.php', // use the `url` property
@@ -537,9 +515,7 @@ $('#calendar').fullCalendar({
         }
 
         // any other sources...
-
     ]
-
 });
 
 $('#calendar').fullCalendar({
@@ -566,9 +542,7 @@ $('#calendar').fullCalendar({
 });
 
 $('#calendar').fullCalendar({
-
     eventSources: [
-
         // your event source
         {
             events: [ // put the array in the `events` property
@@ -591,9 +565,7 @@ $('#calendar').fullCalendar({
         }
 
         // any other event sources...
-
     ]
-
 });
 
 $('#calendar').fullCalendar({
@@ -621,9 +593,7 @@ $('#calendar').fullCalendar({
 });
 
 $('#calendar').fullCalendar({
-
     eventSources: [
-
         // your event source
         {
             events(start: any, end: any, callback: any) {
@@ -634,9 +604,7 @@ $('#calendar').fullCalendar({
         }
 
         // any other sources...
-
     ]
-
 });
 
 $('#calendar').fullCalendar({
@@ -648,11 +616,9 @@ $('#calendar').fullCalendar({
 
 $('#calendar').fullCalendar({
     eventClick(event, element) {
-
         event.title = "CLICKED!";
 
         $('#calendar').fullCalendar('updateEvent', event);
-
     }
 });
 
@@ -709,7 +675,6 @@ $('#draggable1').draggable();
 $('#draggable2').draggable();
 
 $(document).ready(() => {
-
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
@@ -770,14 +735,12 @@ $(document).ready(() => {
             }
         ]
     });
-
 });
 
 $(document).ready(() => {
     /* initialize the external events
     -----------------------------------------------------------------*/
     $('#external-events div.external-event').each(() => {
-
         // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
         // it doesn't need to have a start or end
         var eventObject = {
@@ -793,7 +756,6 @@ $(document).ready(() => {
             revert: true,      // will cause the event to go back to its
             revertDuration: 0  //  original position after the drag
         });
-
     });
     /* initialize the calendar
     -----------------------------------------------------------------*/

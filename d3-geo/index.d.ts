@@ -845,7 +845,6 @@ export interface GeoProjection extends GeoStreamWrapper {
  * A Conic Projection
  */
 export interface GeoConicProjection extends GeoProjection {
-
     /**
      * Return the standard parallels for the conic projection in degrees.
      */
@@ -856,7 +855,6 @@ export interface GeoConicProjection extends GeoProjection {
      * @param value A two-dimensional array representing the standard parallels in degrees.
      */
     parallels(value: [number, number]): this;
-
 }
 
 
@@ -869,7 +867,6 @@ export interface GeoConicProjection extends GeoProjection {
  * For reference to the CanvasRenderingContext2D see https://developer.mozilla.org/en/docs/Web/API/CanvasRenderingContext2D
  */
 export interface GeoContext {
-
     /**
      * Adds an arc to the path with center point (x, y) and radius r starting at startAngle and ending at endAngle.
      * The arc is drawn in clockwise directio by default.
@@ -921,7 +918,6 @@ export interface GeoContext {
  * The second generic corresponds to the type of the DatumObject which will be passed into the geo path generator for rendering.
  */
 export interface GeoPath<This, DatumObject extends GeoPermissibleObjects> {
-
     /**
      * Renders the given object, which may be any GeoJSON feature or geometry object:
      *
@@ -1084,7 +1080,6 @@ export interface GeoPath<This, DatumObject extends GeoPermissibleObjects> {
      * It is passed the object to be rendered, and any additional arguments which have been passed into the call to the render function of the path generator.
      */
     pointRadius(value: (this: This, object: DatumObject, ...args: any[]) => number): this;
-
 }
 
 /**
@@ -1366,7 +1361,6 @@ export function geoTransform<T extends GeoTransformPrototype>(methods: T): { str
  * Geo Identity Transform
  */
 export interface GeoIdentityTranform extends GeoStreamWrapper {
-
     /**
      * Returns the current viewport clip extent which defaults to null.
      */

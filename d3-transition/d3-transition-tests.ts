@@ -343,7 +343,6 @@ maybeG1 = selectAll<SVGSVGElement, any>('svg')
         } else {
             return null;
         }
-
     });
 
 // Tweening Function Use =====================================================
@@ -524,7 +523,3 @@ updateTransitionActive = d3Transition.active<SVGCircleElement, CircleDatum, SVGS
 
 d3Transition.interrupt(topTransition.selection().node());
 d3Transition.interrupt(topTransition.selection().node(), 'top');
-
-
-
-
